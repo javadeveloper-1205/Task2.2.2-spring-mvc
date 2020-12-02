@@ -1,9 +1,7 @@
 package web.carService;
 
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import sun.jvm.hotspot.utilities.Assert;
 import web.model.Car;
 
 import java.util.ArrayList;
@@ -23,19 +21,20 @@ public class CarService {
         list.add(new Car((long) 5, "Subaru", 2019));
     }
 
-            public List<Car> numbers(Integer count) {
-                List<Car> listCars = new ArrayList<>();
-                if (count == null) {
-                    return list;
-                }
-                for (int i = 0; i < count; i++) {
-                    if (count >= 5) {
-                        return list;
-                    } else {
-                        listCars.add(list.get(i));
-                    }
-                }
-                return listCars;
+    public List<Car> numbers(Integer count) {
+        List<Car> listCars = new ArrayList<>();
+        if (count == null) {
+            return list;
+        }
+        for (int i = 0; i < count; i++) {
+            if (count >= 5) {
+                return list;
+            } else {
+                listCars.add(list.get(i));
             }
         }
+        return listCars;
+    }
+}
+
 
