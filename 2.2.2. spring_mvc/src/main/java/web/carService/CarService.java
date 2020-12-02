@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Service
-public class CarServiceImpl {
+public class CarService {
     List<Car> list;
 
     {
@@ -22,8 +22,6 @@ public class CarServiceImpl {
         list.add(new Car((long) 4, "Mersedes", 2018));
         list.add(new Car((long) 5, "Subaru", 2019));
     }
-
-
 
             public List<Car> numbers(Integer count) {
                 List<Car> listCars = new ArrayList<>();
